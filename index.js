@@ -4,9 +4,9 @@ app.set('view engine','ejs');
 const bodyparser=module.require('body-parser');
 
 app.use(bodyparser.urlencoded({extended:true}));
+const port=process.env.PORT||5000;
 
-
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server started at 3000");
 });
 
